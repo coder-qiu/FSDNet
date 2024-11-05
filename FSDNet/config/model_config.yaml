@@ -1,0 +1,130 @@
+Base:
+    model_root: './checkpoints/'
+    num_workers: 5
+    verbose: 1
+    early_stop_patience: 2
+    pickle_feature_encoder: True
+    save_best_only: True
+    eval_steps: null
+    debug_mode: False
+    group_id: null
+    use_features: null
+    feature_specs: null
+    feature_config: null
+
+
+FSDNet_Criteo: # This is a config template
+    model: FSDNet
+    dataset_id: Criteo_x4_10_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    model_structure: parallel
+    learning_rate: 1.0e-3
+    embedding_regularizer: 1.0e-5
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    parallel_dnn_hidden_units: [400, 400, 400]
+    dnn_activations: relu
+    num_cross_layers: 3
+    net_dropout: 0.2
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1}
+    monitor_mode: 'max'
+    choice: 2
+    loss_coefficient: 0.5
+    fea_coefficient: 0.01
+    Temp: 1
+
+
+FSDNet_Movielenslatest_x1_h5: # This is a config template
+    model: FSDNet
+    dataset_id: Movielenslatest_x1_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    model_structure: parallel
+    use_low_rank_mixture: False
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-2
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    parallel_dnn_hidden_units: [400, 400, 400]
+    dnn_activations: relu
+    num_cross_layers: 3
+    net_dropout: 0.3
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+    choice: 2
+    Temp: 1
+    loss_coefficient: 0.3
+    fea_coefficient: 0.01
+
+FSDNet_ML-1M:
+    model: FSDNet
+    dataset_id: ML-1M
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    model_structure: parallel
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-1
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    parallel_dnn_hidden_units: [400, 400, 400]
+    num_cross_layers: 3
+    hidden_activations: relu
+    net_dropout: 0.1
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+    choice: 2
+    loss_coefficient: 0.4
+    fea_coefficient: 0.01
+    Temp: 1.8
+
+
+FSDNet_Frappe_x1_h5: # This is a config template
+    model: FSDNet
+    dataset_id: Frappe_x1_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    model_structure: parallel
+    learning_rate: 1.e-3
+    embedding_regularizer: 0.1
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    stacked_dnn_hidden_units: [400, 400, 400]
+    parallel_dnn_hidden_units: [400, 400, 400]
+    dnn_activations: relu
+    num_cross_layers: 3
+    net_dropout: 0.7
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2023
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+    choice: 2
+    Temp: 1.3
+    loss_coefficient: 0.9
+    fea_coefficient: 0.01
