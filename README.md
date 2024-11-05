@@ -4,7 +4,7 @@
 
 ## Model Overview
 
-![image-20241105154550734](C:\Users\aqiu\AppData\Roaming\Typora\typora-user-images\image-20241105154550734.png)
+![image](https://github.com/coder-qiu/FSDNet/blob/main/model.png)
 
 ## Requirements
 python>=3.6  
@@ -18,7 +18,7 @@ h5py
 tqdm  
 
 ## Experiment results
-![image-20241105154637716](C:\Users\aqiu\AppData\Roaming\Typora\typora-user-images\image-20241105154637716.png)
+![image](https://github.com/coder-qiu/FSDNet/blob/main/experiment.png)
 
 
 
