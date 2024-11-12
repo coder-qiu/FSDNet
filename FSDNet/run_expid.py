@@ -16,7 +16,7 @@
 
 import sys
 
-sys.path.append("/home/rqz/code/ctr")
+sys.path.append("/home/code/ctr")
 import os
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 import sys
