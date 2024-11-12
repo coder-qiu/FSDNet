@@ -2,7 +2,7 @@
 
 # Feature Interactions Fusion Self-Distillation Network For CTR Prediction
 
-## Model Overview
+## Framework Overview
 
 ![image](https://github.com/coder-qiu/FSDNet/blob/main/framework.png)
 
