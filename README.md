@@ -4,7 +4,7 @@
 
 ## Model Overview
 
-![image](https://github.com/coder-qiu/FSDNet/blob/main/model.png)
+![image](https://github.com/coder-qiu/FSDNet/blob/main/framework.png)
 
 ## Requirements
 python>=3.6  
