@@ -18,7 +18,7 @@ h5py
 tqdm  
 
 ## Experiment results
-
+![image](https://github.com/coder-qiu/FSDNet/blob/main/experiment.png)
 
 
 
